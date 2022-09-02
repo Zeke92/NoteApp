@@ -4,6 +4,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.myapplication.ui.theme.*
+import java.lang.Exception
 
 @Entity
 data class Note(
@@ -17,3 +18,5 @@ data class Note(
         val noteColors = listOf(Violet, RedOrange, RedPink, LightBlue, LightGreen)
     }
 }
+
+class InvalidNoteException(message: String): Exception(message)
